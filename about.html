@@ -1,0 +1,47 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>米国株取引の始め方・注目銘柄</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{% static 'about.css' %}">
+</head>
+
+<body class="nohero">
+
+<header>
+	<div class="container">
+		<a href="{% url 'top' %}" class="headA">Top</a>
+
+		<nav class="headB">
+			<ul>
+				<li><a href="{% url 'content' %}">株取引・始め方</a></li>
+				<li><a href="{% url 'content1' %}">チャート＆ファンダメンタル分析</a></li>
+				<li><a href="{% url 'list' %}">注目銘柄</a></li>
+				<li><a href="{% url 'about' %}">サイトについて</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<div class="post">
+	<div class="container">
+		<h1>サイトについて</h1>
+		<p>このサイトでは、主に米国株についてまとめたサイトです。米国株についてまとめた日本版サイトが少ないと感じたため、このサイトを作成しました。資産を増やす上で、米国株を保有することはとても魅力的です。このサイトを通して、米国株について理解して頂ければ幸いです。</p>
+	</div>
+</div>
+
+</body>
+
+<footer>
+	<div class="container">
+		<p>Copyright 🄫 beistock-kabu 2020</p>
+	</div>
+
+</footer>
+
+</html>

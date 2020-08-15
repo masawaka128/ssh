@@ -1,0 +1,52 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>株取引トップページ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{% static 'content.css' %}">
+<script src="https://use.fontawesome.com/926fe18a63.js"></script>
+</head>
+
+<body class="nohero">
+
+<header>
+	<div class="container">
+		<a href="{% url 'top' %}" class="headA">Top</a>
+
+		<nav class="headB">
+			<ul>
+				<li><a href="{% url 'content' %}">株取引・始め方</a></li>
+				<li><a href="{% url 'content1' %}">チャート＆ファンダメンタル分析</a></li>
+				<li><a href="{% url 'list' %}">注目銘柄</a></li>
+				<li><a href="{% url 'about' %}">サイトについて</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<article class="post">
+	<div class="container">
+		<h1>PLUG POWER (PLUG)</h1>
+		<img src={% static 'image/hydrogen.jpg' width="400" height='180' %} alt="">
+		<p>最近、EV自動車で有名なテスラの株価が暴騰しており、再生可能エネルギーへの注目が増している。そこで、今回は私が注目している燃料電池メーカーのプラグ・パワー（PLUG)について書く。</p>
+		<p>まず、燃料電池とは何のかについて説明する。「燃料電池」は、電池ではあるがケータイに入っているリチウムイオン蓄電池や太陽電池とも違う。ではどう違うのか。</p>
+		<p>蓄電池は入力した電力を内部に保存して、保存した分だけ後から取り出すことができる装置だ。燃料電池は水素と空気中の酸素と反応して電力を生み出す。</p>
+		<p>フォークリフトはPLUG POWER製の燃料電池電源を搭載し、2017年に米Amazon.comや米Walmartに大量導入が始まった。</p>
+		<p>バッテリー式フォークリフトはそのクリーンさから普及が進んでいますが、電力の充填に時間がかかる点やバッテリーの交換コストに問題が残ります。FC（水素燃料電池）式フォークリフトは、水素充填時間約５分で鉛バッテリー約8時間分の連続稼働ができ、水素を使い切るまで100％の出力で作業が行えます。一度設備を整えればランニングコストも大幅に削減できます。加えて、スペアバッテリ、バッテリー置場、充電装置が不要になるため、政府・自治体では次世代の産業として導入に対しての取り組みが始まっています。
+
+</p>
+	</div>
+</article>
+
+<footer>
+	<div class="container">
+		<p>Copyright 🄫 beistock-kabu 2020</p>
+	</div>
+</footer>
+
+</body>
+</html>

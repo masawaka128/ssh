@@ -1,0 +1,90 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>米国株取引の始め方・注目銘柄</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{% static 'content1.css' %}">
+</head>
+
+<body class="nohero">
+
+<header>
+	<div class="container">
+		<a href="{% url 'top' %}" class="headA">Top</a>
+
+		<nav class="headB">
+			<ul>
+				<li><a href="{% url 'content' %}">株取引・始め方</a></li>
+				<li><a href="{% url 'content1' %}">チャート＆ファンダメンタル分析</a></li>
+				<li><a href="{% url 'list' %}">注目銘柄</a></li>
+				<li><a href="{% url 'about' %}">サイトについて</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<article class="post">
+	<div class="container">
+
+		<img src={% static 'image/chart.jpg' %} alt="チャート">
+
+		<h1>チャート分析</h1>
+		<p>私が普段使っているチャート分析について説明いたします。分析方法の細かい説明ではなく、どういう風に使えばいいのかを簡単に記載しました。</p>
+		<p>下記は私が実際にマネックス証券で米国株取引を行っている時の画面です。指標の設定は下記に示した通りで、基本的にデフォルト設定で問題ありません。</p>
+		<img src={% static 'image/chart_example.jpg' %} alt="チャート分析例">
+		<img src={% static 'image/setting_example.jpg' %} alt="設定例">
+		<h3>①移動平均線</h3>
+		<p>移動平均線は、投資家の心理状態が秘められています。私は上記①の領域のように株価が上昇している際に移動平均線を使います。基本的に①のように株価が上がっているときは移動平均線が支持線となり、移動平均線上で反発することがかなり多いいです。</p>
+		<p>例えば、強い上昇が続いている場合、投資家の心理状態としては「できれば安いところで買いたい」と考えている人がほとんどでしょう。そのような心理状態のなか、過去に25日移動平均線まで下げると、決まって上昇する動きが頻繁に見られていたとすると、25日移動平均線まで我慢し、この水準で買いに動く人が多くなる傾向があります。そのため、移動平均線上で反発します。</p>
+		<p><a href="https://www.jibunbank.co.jp/products/foreign_deposit/chart/help/sma/">移動平均線の参考サイト</a></p>
+		<h3>②ボリジャーバンド</h3>
+		<p>私はボリジャーバンドは上記②のようなチャートが横横の時に使用します。±1σ～±3σを各々下値支持線や上値抵抗線と考え、株価が－1σ～－3σにきた時に買いポイント、＋1σ～＋3σにきた時に売りポイントとみます。上記グラフの場合だと±2σで反発していることが分かると思います。</p>
+		<p>ボリンジャーバンドの±1σの範囲内に収まる確率　⇒　約<strong>68.3％</strong><br />
+		ボリンジャーバンドの±2σの範囲内に収まる確率　⇒　約<strong>95.4％</strong><br />
+		ボリンジャーバンドの±3σの範囲内に収まる確率　⇒　約<strong>99.7％</strong></p>
+		<p><a href="https://www.jibunbank.co.jp/products/foreign_deposit/chart/help/bollinger_band/">ボリジャーバンドの参考サイト</a></p>
+
+		<h3>③MACD</h3>
+		<p>上記③の領域にある指標がMACDになります。私はチャートが横横から上昇に転換するタイミングをMACDを見て判断します。赤色棒グラフの高さが段々と小さくなり緑色の棒グラフに代わるタイミングが転換点となります。</p>
+		<p>上記グラフを例にすると、その転換点から株価が上昇していることが分かります。そのため、私は赤色の棒グラフが段々と小さくなりかつボリジャーバンドが－2σ付近の時に買うようにしています。</p>
+
+		<h3>③フィボナッチ</h3>
+		<p>随時更新</p>
+
+
+		<h1>ファンダメンタル分析</h1>
+		<p>今後長期で成長が見込める会社を選ぶ際にファンダメンタル分析を行います。下記参考書は私がおすすめする参考書になります。それぞれ日本株と米国株に特化したファンダメンタル分析について説明した本になります。</p>
+		<p>米国株のファンダメンタル分析の方法を学びたい方には「グローバル企業のビジネスモデルをつかむ　英文決算書の読み方」が特におすすめです。米国株の決算書の読み方をこんなにも詳しく説明している本は他にありません。ぜひ購入してみて下さい。</p>
+		<p>初心者の方には「株を買うなら最低限知っておきたいファンダメンタル投資の教科書」おすすめします。決算書を読んだことがない方が米国株の決算書を急に読むのはハードルが高いと思うので、こちらの参考書から始めるといいと思います。</p>
+
+		<table cellpadding="0" cellspacing="0" border="0" style=" border:1px solid #ccc; width:300px;"><tr style="border-style:none;"><td style="vertical-align:top; border-style:none; padding:10px; width:44px;"><a href="https://rpx.a8.net/svt/ejp?a8mat=3BK0V2+218C6Q+2HOM+BWGDT&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2Fg00q0724.2bo11c45.g00q0724.2bo12179%2Fa20080860164_3BK0V2_218C6Q_2HOM_BWGDT%3Fpc%3Dhttp%253A%252F%252Fitem.rakuten.co.jp%252Fbook%252F16098624%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252Fbook%252Fi%252F19815566%252F" rel="nofollow"><img border="0" alt="" src="http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/2340/9784802612340.jpg?_ex=64x64" /></a></td><td style="font-size:12px; vertical-align:middle; border-style:none; padding:10px;"><p style="padding:0; margin:0;"><a href="https://rpx.a8.net/svt/ejp?a8mat=3BK0V2+218C6Q+2HOM+BWGDT&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2Fg00q0724.2bo11c45.g00q0724.2bo12179%2Fa20080860164_3BK0V2_218C6Q_2HOM_BWGDT%3Fpc%3Dhttp%253A%252F%252Fitem.rakuten.co.jp%252Fbook%252F16098624%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252Fbook%252Fi%252F19815566%252F" rel="nofollow">グローバル企業のビジネスモデルをつかむ 英文決算書の読みかた [ 大山 誠 ]</a></p><p style="color:#666; margin-top:5px line-height:1.5;">価格:<span style="font-size:14px; color:#C00; font-weight:bold;">1,980円</span><br/><span style="font-size:10px; font-weight:normal;">(2020/8/8 11:38時点)</span><br/><span style="font-weight:bold;">感想(0件)</span></p></td></tr></table>
+		<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=3BK0V2+218C6Q+2HOM+BWGDT" alt="">
+
+		<table cellpadding="0" cellspacing="0" border="0" style=" border:1px solid #ccc; width:300px;"><tr style="border-style:none;"><td style="vertical-align:top; border-style:none; padding:10px; width:44px;"><a href="https://rpx.a8.net/svt/ejp?a8mat=3BK0V2+218C6Q+2HOM+BWGDT&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2Fg00q0724.2bo11c45.g00q0724.2bo12179%2Fa20080860164_3BK0V2_218C6Q_2HOM_BWGDT%3Fpc%3Dhttp%253A%252F%252Fitem.rakuten.co.jp%252Fbook%252F15764445%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252Fbook%252Fi%252F19447863%252F" rel="nofollow"><img border="0" alt="" src="http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7041/9784478107041.jpg?_ex=64x64" /></a></td><td style="font-size:12px; vertical-align:middle; border-style:none; padding:10px;"><p style="padding:0; margin:0;"><a href="https://rpx.a8.net/svt/ejp?a8mat=3BK0V2+218C6Q+2HOM+BWGDT&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2Fg00q0724.2bo11c45.g00q0724.2bo12179%2Fa20080860164_3BK0V2_218C6Q_2HOM_BWGDT%3Fpc%3Dhttp%253A%252F%252Fitem.rakuten.co.jp%252Fbook%252F15764445%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252Fbook%252Fi%252F19447863%252F" rel="nofollow">株を買うなら最低限知っておきたい ファンダメンタル投資の教科書　改訂版 [ 足立 武志 ]</a></p><p style="color:#666; margin-top:5px line-height:1.5;">価格:<span style="font-size:14px; color:#C00; font-weight:bold;">1,870円</span><br/><span style="font-size:10px; font-weight:normal;">(2020/8/8 12:10時点)</span><br/><span style="font-weight:bold;">感想(4件)</span></p></td></tr></table>
+		<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3BK0V2+218C6Q+2HOM+BWGDT" alt="">
+
+	</div>
+
+</article>
+
+
+
+</body>
+
+<footer>
+	<div class="container">
+		<p>Copyright 🄫 beistock-kabu 2020</p>
+	</div>
+
+</footer>
+
+
+
+
+
+
+</html>

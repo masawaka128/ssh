@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+
+/* 基本色 */
+:root {
+	--main-color: #5D9AB2;
+	--accent-color: #5D99FF;
+	--dark-main-color: #2B5566;
+	--text-bright-color: #fff;
+	--icon-color: #fff;
+	--icon-bk-color: #ddd;
+	--large-width: 1000px;
+	--gray-color: #ddd;
+	--middle-width: 800px;
+}
+
+/*基本設定: フォントサイズ */
+@media (max-width: 599px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    :root {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 800px) {
+    :root {
+        font-size: 18px;
+    }
+}
+
+body {font-size: 16px;}
+
+
+/* 基本設定： ページ全体 */
+body {
+    margin: 0;
+	font-family: 'メイリオ',
+	'Hiragino Kaku Gothic Pro',
+	sans-serif;
+}
+
+@keyframes sk-bouncedelay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*ヘッダー */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(255,255,255,0.9)
+}
+
+.nohero header {
+    position: static;
+
+
+}
+
+/* ヘッダーA：サイト名 */
+.headA {
+    display: inline-block;
+    line-height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #778899;
+    color: white;
+    font-weight: 550;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    transition: all 0.4s;
+    animation: sk-bouncedelay 1.4s;
+    border-radius: 6px;
+}
+
+.headA:hover {
+    background-color: black;
+    color: white;
+
+}
+
+/* ヘッダーB：ナビゲーションメニュー */
+.headB ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.headB a {
+    display: block;
+    padding: 15px;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.4s;
+    animation: sk-bouncedelay 1.4s;
+    border-radius: 6px;
+}
+
+.headB a:hover {
+    background-color: black;
+    color: white;
+
+}
+
+@media (min-width: 768px) {
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+
+    .headB ul {
+        display: flex;
+        list-style: none;
+    }
+}
+
+/* コンテンツページ：記事 */
+.post .container {
+    max-width: 800px;
+    max-width: var(--middle-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 10px 30px;
+    animation: sk-bouncedelay 1.4s;
+    align-items: center;
+}
+
+.post h1 {
+    padding-left: 0.5rem;
+    border-left: solid 0.75rem #BF6A7A;
+    border-left:
+        solid 0.75rem var(--accent-color);
+    font-size: 2em;
+    margin-top: 60px;
+}
+
+.post p {
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.post img {
+    max-width: 100%;
+}
+
+.post h3 {
+    padding-top: 20px;
+}
+
+
+/* Footer*/
+footer {
+    display: inline;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer p {
+    text-align: center;
+    padding: 90px 0 20px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 11px;
+    background-color: black;
+    transition: all 0.4s;
+    animation: sk-bouncedelay 1.4s;
+}
+
+.table {
+    text-align: center;
+}

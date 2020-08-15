@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+
+/* 基本色 */
+:root {
+	--large-width: 1200px;
+	--gray-color: #ddd;
+	--middle-width: 800px;
+}
+
+/*基本設定: フォントサイズ */
+@media (max-width: 599px) {
+    :root {
+        font-size: 14px;
+        large-width: 1700px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    :root {
+        font-size: 16px;
+        large-width: 1700px;
+    }
+}
+
+@media (min-width: 800px) {
+    :root {
+        font-size: 18px;
+        large-width: 1700px;
+    }
+}
+
+body {font-size: 16px;}
+
+
+/* 基本設定： ページ全体 */
+body {
+    margin: 0;
+	font-family: 'メイリオ',
+	'Hiragino Kaku Gothic Pro',
+	sans-serif;
+}
+
+
+/* コンテンツA： ヒーローイメージ */
+.conA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 450px;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,1)), url(image/top2.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+	text-align: center;
+	animation: sk-bouncedelay 1.4s;
+
+}
+
+@keyframes sk-bouncedelay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.conA img {
+    width: 20%;
+}
+
+@media (min-width: 768px) {
+	.conA h1 {
+		font-size: 80px;
+	}
+
+	.conA p {
+		font-size: 24px;
+	}
+}
+
+/*ヘッダー */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(255,255,255,0)
+}
+
+.nohero header {
+    position: static;
+
+}
+
+/* ヘッダーA：サイト名 */
+.headA {
+    display: inline-block;
+    line-height: 70px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 550;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    text-decoration: none;
+    transition: all 0.4s;
+    animation: sk-bouncedelay 1.4s;
+    border-radius: 6px;
+}
+
+.headA:hover {
+
+
+}
+
+/* ヘッダーB：ナビゲーションメニュー */
+.headB ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.headB a {
+    display: block;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.4s;
+    animation: sk-bouncedelay 1.4s;
+    border-radius: 6px;
+}
+
+.headB a:hover {
+    background-color: black;
+    color: white;
+
+}
+
+@media (min-width: 768px) {
+    header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1380px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+
+    .headB ul {
+        display: flex;
+        list-style: none;
+    }
+}
+
+/* フッター */
+footer {
+    display: inline;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+footer p {
+    text-align: center;
+    padding: 90px 0 20px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 11px;
+    background-color: black;
+    transition: all 0.4s;
+    animation: sk-bouncedelay 1.4s;
+}

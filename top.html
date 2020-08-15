@@ -1,0 +1,44 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>米国株取引の始め方・注目銘柄</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+<header>
+	<div class="container">
+		<a class="headA">BEISTOCK</a>
+
+		<nav class="headB">
+			<ul>
+				<li><a href="{% url 'content' %}">株取引・始め方</a></li>
+				<li><a href="{% url 'content1' %}">チャート＆ファンダメンタル分析</a></li>
+				<li><a href="{% url 'list' %}">注目銘柄</a></li>
+				<li><a href="{% url 'about' %}">サイトについて</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<section class="conA">
+<div class="container">
+	<p></p>
+
+</div>
+</section>
+</body>
+
+<footer>
+	<div class="container">
+		<p>Copyright 🄫 beistock-kabu 2020</p>
+	</div>
+</footer>
+
+</html>
