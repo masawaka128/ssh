@@ -1,0 +1,71 @@
+html {
+  background-color: whitesmoke;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 100px;
+  background-color: rgb(41, 34, 34);
+  color: white;
+
+}
+
+div {
+  display: flex;
+  flex: 1;
+}
+
+main {
+  flex: 1;
+  word-break: break-all;
+  background-color: white;
+}
+
+main p {
+  padding-left: 20px;
+}
+
+main li {
+  list-style: none;
+  padding-left: 25%;
+}
+
+main a {
+  text-decoration: none;
+  color: black;
+}
+
+main a:hover {
+  color: white;
+}
+
+aside {
+  width: 250px;
+  background-color: white;
+  word-break: break-all;
+}
+
+footer {
+  height: 100px;
+  background-color: rgb(63, 61, 61);
+  color: white;
+}
+
+
+@media screen and (max-width:900px) {
+  body, nav, aside {
+    width: 100%;
+  }
+  div {
+    flex-direction: column;
+  }
+}
+
+
